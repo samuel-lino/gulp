@@ -10,8 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "angular-owl-carousel2": "^1.0.6",
     "bootstrap": "^5.2.3",
+    "fontawesome": "^5.6.3",
     "jquery": "^3.6.4",
+    "jquery-mask": "^0.0.1-security",
     "jqueryui": "^1.11.1"
   }
 }
