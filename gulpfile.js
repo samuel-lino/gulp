@@ -46,8 +46,8 @@ function tarefasimage(cb){
                     gifsicle: true,
                     svgo: true,
                     concurrent: 10,
-                    quiet: true
-                }))
+                    quiet: true // defaults to false
+                  }))
                 .pipe(g.dest('./dist/images'))
 }
 
