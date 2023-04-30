@@ -3,7 +3,7 @@ const min = require('gulp-cssmin')
 const concat = require('gulp-concat')
 const rename = require('gulp-rename')
 const jscript = require('gulp-uglify')
-const imagens = require('gulp-image')
+const image = require('gulp-image')
 
 function tarefascss(cb){
 
@@ -37,7 +37,7 @@ function tarefasjs(cb){
 function tarefasimage(cb){
 
     return g.src('./assets/images/*')
-                .pipe(imagens({
+                .pipe(image({
                     pngquant: true,
                     optipng: false,
                     zopflipng: true,
