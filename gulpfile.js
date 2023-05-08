@@ -4,6 +4,8 @@ const concat = require('gulp-concat')
 const rename = require('gulp-rename')
 const jscript = require('gulp-uglify')
 const image = require('gulp-image')
+const stripcoment = require('gulp-strip-comments')
+const stripcsscoment = require('gulp-strip-css-comments')
 
 function tarefascss(cb){
 
@@ -14,6 +16,7 @@ function tarefascss(cb){
                     './assets/css/style.css',
                 ])
                 .pipe(concat('libs.css'))
+                .pipe(stripcsscoment())
                 .pipe(min())
                 .pipe(rename({suffix: '.min'}))
                 .pipe(g.dest('./dist/css'))
@@ -28,6 +31,7 @@ function tarefasjs(cb){
                 './vendor/jquery-ui/jquery-ui.js',
                 './assets/js/custom.js'])
                 .pipe(concat('libs.js'))
+                .pipe(stripcoment())
                 .pipe(jscript())
                 .pipe(rename({suffix: '.min'}))
                 .pipe(g.dest('./dist/js'))
